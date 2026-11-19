@@ -1,28 +1,28 @@
 :root {
   color-scheme: dark;
   --font: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
-  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;  
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
   --radius: 2px;
   --radius-btn: 2px;
   --space-1: 0.200rem;
   --space-2: 0.400rem;
   --space-3: 0.600rem;
   --space-4: 0.800rem;
-  --space-5: 1.200rem;  
+  --space-5: 1.200rem;
   --dur: 140ms;
   --ease: ease-out;
   --shadow: none;
   --accent: #3ddc97;
   --on-accent: #111111;
   --accent-hover: color-mix(in srgb, var(--accent) 86%, black);
-  --accent-soft: color-mix(in srgb, var(--accent) 14%, var(--bg));  
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, var(--bg));
   --bg: #14161a;
   --surface: #1b1e23;
   --surface-2: #23272e;
   --line: #323741;
   --text: #e8eaee;
   --muted: #9aa1ad;
-}  
+}
 
 * {
   box-sizing: border-box;
@@ -36,7 +36,7 @@ body {
   font-family: var(--font);
   font-size: 14px;
   line-height: 1.4;
-  padding: var(--space-5);  
+  padding: var(--space-5);
 }
 
 button, input {
@@ -50,91 +50,91 @@ button, input {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--space-5);
-  padding-bottom: var(--space-4);  
+  padding-bottom: var(--space-4);
 }
 
 h1 {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-}  
+}
 
 .controls {
   display: flex;
   gap: var(--space-3);
 }
 
-button {  
+button {
   background: transparent;
   border: 1px solid var(--accent);
   border-radius: var(--radius-btn);
   color: var(--accent);
   cursor: pointer;
   padding: var(--space-2) var(--space-4);
-  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);  
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
 button:hover {
   background-color: var(--accent-soft);
 }
 
-button:active {  
+button:active {
   transform: translateY(1px);
 }
 
 button:disabled {
   border-color: var(--line);
   color: var(--muted);
-  cursor: not-allowed;  
+  cursor: not-allowed;
   background-color: transparent;
 }
 
 button:focus-visible,
 input:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;  
+  outline-offset: 2px;
 }
 
 .filter-bar {
   align-items: center;
   background-color: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);  
+  border-radius: var(--radius);
   display: flex;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
   padding: var(--space-3);
 }
 
-.filter-bar label {  
+.filter-bar label {
   color: var(--muted);
   font-family: var(--font-mono);
 }
 
 .filter-bar input {
   background: var(--bg);
-  border: 1px solid var(--line);  
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   color: var(--text);
   flex-grow: 1;
   padding: var(--space-2) var(--space-3);
 }
 
-.stat-box {  
+.stat-box {
   color: var(--muted);
   font-family: var(--font-mono);
 }
 
 .card-grid {
   display: grid;
-  gap: var(--space-4);  
+  gap: var(--space-4);
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .user-card {
   background-color: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);  
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -148,28 +148,28 @@ input:focus-visible {
 
 .user-header {
   align-items: center;
-  border-bottom: 1px solid var(--line);  
+  border-bottom: 1px solid var(--line);
   display: flex;
   gap: var(--space-3);
   padding-bottom: var(--space-3);
 }
 
 .user-avatar {
-  background-color: var(--surface-2);  
+  background-color: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   font-family: var(--font-mono);
   font-size: 16px;
   font-weight: bold;
   height: 40px;
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
 }
 
 .user-info {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -183,27 +183,25 @@ input:focus-visible {
 }
 
 .user-details {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   gap: var(--space-2);
   font-family: var(--font-mono);
   font-size: 12px;
 }
 
-.detail-row {  
+.detail-row {
   display: flex;
   justify-content: space-between;
 }
 
 .detail-label {
   color: var(--muted);
-}  
+}
 
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0s !important;
     transition-duration: 0s !important;
   }
-}  
-
-
+}
